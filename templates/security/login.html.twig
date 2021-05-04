@@ -1,0 +1,46 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Les Petits Français</title>
+    <link rel="stylesheet" href="assets4/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets4/css/login.css">
+    <link rel="stylesheet" href="assets4/css/styles.css">
+</head>
+
+{% block body %}
+
+<form class="form-signin" method="POST">
+
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    {% endif %}
+
+    <center>
+    <img class="mb-4" src="assets4/img/kids.jpg" alt="" width="150" height="100">
+    <h1 class="h3 mb-3 font-weight-normal">Connecte-toi !</h1>
+    </center>
+    <label for="inputText" class="sr-only">Identifiant</label>
+    <input type="text" value="{{ last_username }}" placeholder="Mets ici ton identifiant" name="username" id="inputUsername" class="form-control" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" placeholder="Mets ici ton mot de passe" name="password" id="inputPassword" class="form-control" required>
+    <div class="checkbox mb-3">
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="window.location.href = '';">Clique ici pour te connecter !</button>
+    <center>
+    <p class="mt-5 mb-3 text-muted">Copyright © INFORMASCHOOL</p>
+    </center>
+
+    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+
+</form>
+    <script src="assets4/js/jquery.min.js"></script>
+    <script src="assets4/bootstrap/js/bootstrap.min.js"></script>
+
+{% endblock %}

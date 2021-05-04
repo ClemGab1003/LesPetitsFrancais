@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<div class="team-boxed" style="background: linear-gradient(#F9FF69 0%, rgb(255,197,164) 50%, rgb(255,166,166) 100%), var(--dark);">
+        <div class="container">
+            <div class="intro">
+                <h2 class="text-center">Exercice - Lire</h2>
+                <p class="text-center">Ecoute, et répète après-moi</p>
+            </div>
+            <div class="row people">
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="box" style="background: rgba(79,134,195,0);"><img class="rounded-circle" src="assets/img/read.png" style="background: rgb(255,184,133);">
+                        <h3 class="name">Lire - 1</h3>
+                        <p class="description">Répète le mot que tu entends</p>
+                        <p><audio src="{{ asset("vocaux/crocodile.mp3") }}" controls type="audio/mpeg"></audio></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="box" style="background: rgba(255,184,133,0);"><img class="rounded-circle" src="assets/img/read.png" style="background: rgb(255,184,133);">
+                        <h3 class="name">Lire - 2</h3>
+                        <p class="description">Répète le mot que tu entends<br></p>
+                        <p><audio src="{{ asset("vocaux/voiture.mp3") }}" controls type="audio/mpeg"></audio></p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 item">
+                    <div class="box" style="background: rgba(255,184,133,0);"><img class="rounded-circle" src="assets/img/read.png" style="background: rgb(255,184,133);">
+                        <h3 class="name">Lire - 3</h3>
+                        <p class="description">Répète le mot que tu entends<br></p>
+                        <p><audio src="{{ asset("vocaux/potiron.mp3") }}" controls type="audio/mpeg"></audio></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <center>
+            <button type="button" class="btn btn-success">Valider</button>
+        </center>
+        <br/><br/>
+    </div>
+
+    <div class="team-boxed" style="background: linear-gradient(rgb(255,166,166), rgb(255,212,212) 50%, rgb(196,209,255));"></div>
+    <div class="team-boxed" style="background: linear-gradient(rgb(196,209,255), rgb(192,244,255) 50%, rgb(197,255,161));"></div>
+    <footer style="color: #ffffff;background: var(--dark);"><span class="copyright" style="color: var(--light);">Copyright&nbsp;© INFORMASCHOOL</span></footer>
+
+    {% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<br/><br/>
+<div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6"></div>
+                <div class="col-md-6"></div>
+            </div>
+        </div>
+    </div>
+    <header class="masthead" style="background-image: url('assets3/img/ca857deb-d28c-c850-89c0-f8a6000f9e10.jpg');"></header>
+    <div class="team-boxed" style="background: linear-gradient(rgb(196,209,255), rgb(192,244,255) 50%, rgb(197,255,161));">
+        <div class="container">
+            <div class="intro"></div>
+        </div>
+    </div>
+    <div style="background: url(&quot;assets3/img/mongolfiere.jpg&quot;);border-style: none;opacity: 1;filter: blur(0px) brightness(100%) saturate(200%);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6" style="opacity: 1;"><img src="assets3/img/incognito.png" style="margin: 90px;padding: 0px;filter: contrast(0%) grayscale(100%) saturate(100%) sepia(100%);"></div>
+                <div class="col-md-6">
+                    <h1 style="margin: 80px;font-family: 'Roboto Slab', serif;background: #7da6bc;border-radius: 15px;opacity: 1;">{{ app.user.lastname }}</h1>
+                    <h1 style="margin: 80px;font-family: 'Roboto Slab', serif;background: #7da6bc;border-radius: 15px;">{{ app.user.firstname }}</h1><strong style="width: 0px;margin: 80px;padding: 0px;font-family: 'Roboto Slab', serif;background: #7da6bc;border-radius: 15px;">Classe de CP</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <footer style="color: #ffffff;background: var(--dark);"><span class="copyright" style="color: var(--light);">Copyright&nbsp;© INFORMASCHOOL</span></footer>
+
+{% endblock %}

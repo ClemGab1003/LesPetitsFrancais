@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<header class="masthead" style="background-image: url('assets2/img/ca857deb-d28c-c850-89c0-f8a6000f9e10.jpg');">
+        <div class="container"></div>
+</header>
+    <div class="photo-gallery" style="background: url(&quot;assets2/img/414109608-0.png&quot;) center / cover no-repeat, #ffb2ad;">
+        <div class="container" style="opacity: 1;">
+            <div class="intro">
+                <h2 class="text-center" style="font-family: 'Droid Serif';opacity: 1;">Ma galerie</h2>
+                <p class="text-center" style="color: var(--dark);opacity: 1;">Ici, tu peux retrouver les images que tu as gagné après avoir effectué les exercices !</p>
+            </div>
+            <div class="row photos">
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><img class="img-fluid" src="{{ asset("imgmetiers/pompier.png") }}"></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><img class="img-fluid" src="{{ asset("imgmetiers/coiffeur.png") }}"></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><img class="img-fluid" src="{{ asset("imgmetiers/pompier.png") }}" style="opacity: 0%;"></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><img class="img-fluid" src="{{ asset("imgmetiers/pompier.png") }}" style="opacity: 0%;"></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><img class="img-fluid" src="{{ asset("imgmetiers/pompier.png") }}" style="opacity: 0%;"></div>
+                <div class="col-sm-6 col-md-4 col-lg-3 item"><img class="img-fluid" src="{{ asset("imgmetiers/pompier.png") }}" style="opacity: 0%;"></div>
+            </div>
+        </div>
+    </div>
+    <footer style="color: #ffffff;background: var(--dark);"><span class="copyright" style="color: var(--light);">Copyright&nbsp;© INFORMASCHOOL</span></footer>
+
+{% endblock %}
